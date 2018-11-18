@@ -14,3 +14,4 @@
 - En la parte de redis se presento errores y problemas ya que mi computadora me bloqueo puertos al momento de instalar REDIS, 
   la solucion que se realizo fue un formateo de computadora ya que ninguna solucion encontrada funciono
 - Otro reto fue crear el docker-compose ya que tenia que usa una buena tabulacion en el mismo lo cual hacia que se mantuviera un orden
+- En el momento se tienen unos datos en la base de datos como datos de prueba que se ingresaron para la demostracion y prueba que     que la apicacion se encuentra funcionando, en el servidor
