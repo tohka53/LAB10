@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  lab7:
+    image: lab7
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+        - 3000:3000

@@ -1,0 +1,40 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend
+    hostname: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+   
+  backend:
+    container_name: backend
+    hostname: backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      BASE_URL: http://localhost:4200 
+      MONGO_URI: mongodb://mongo/mean-crud
+    depends_on:
+      - mongo
+      - frontend
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "4200:4200"
+    volumes:
+      - ../data/redis:/data
+    restart: always
+ 
+  mongo:
+    image: mongo:3.6-stretch
+    restart: always
+    ports:
+      - 27017:27017
+   
