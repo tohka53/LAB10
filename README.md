@@ -35,9 +35,52 @@ El propósito de Programación Web era que al finalizar el curso se tuviera una 
 # FrontEnd
 Se realizo el CRUD en Angular,  Se empleo Angular-Bootstrap 4 para manejar el diseño de la página.
 
-Se siguio la guia para crear una App en Angular del Git. Los comandos que se ejecutaron fueron los siguientes:
+Se siguio la guia para crear una App en Angular de Git. Los comandos que se ejecutaron fueron los siguientes:
 
     ng new name-app
     npm install -g @angular/cli
     npm install --save @ng-bootstrap/ng-bootstrap
     import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+    
+# BackEnd
+
+Se empleo NodeJs, se realizo una conexión con una base de datos MongoDB alojada en AWS, el resultado final fue una API con conexión a Mongo.
+
+Los comandos que se ejecutaron para construir el BackEnd fueron:
+
+    npm init
+    npm install --save express body-parser mongoose
+
+Se creo un database.js donde se configura la conexion al servidor y el puerto en donde se hara la conexión.
+
+# Modelo del BackEnd
+
+El BackEnd se creo en base la cual manda la informacion directamente a la base de datos; por lo que se tiene un Product.model.js donde se define la estructura del schema de la base de datos de MongoDB
+
+      const mongoose = require('mongoose');
+      const { Schema } = mongoose;
+
+      const employeeSchema = new Schema({
+     name: { type: String, required: true},
+    position: { type: String, required: true },
+    office: { type: String, required: true },
+    salary: { type: Number, required: true}
+    });
+
+    module.exports = mongoose.model('Employee', employeeSchema);
+
+Luego se creo un Product.route.js donde se definieron las rutas del APi y un Product.controller.js donde se definieron las acciones para cada verbo.
+
+
+        const express = require('express');
+        const router = express.Router();
+
+        const employee = require('../controllers/employee.controller');
+
+        router.get('/', employee.getEmployees);
+      router.post('/', employee.createEmployee);
+      router.get('/:id', employee.getEmployee);
+    router.put('/:id', employee.editEmployee);
+    router.delete('/:id', employee.deleteEmployee);
+
+module.exports = router;
