@@ -15,3 +15,21 @@
   la solucion que se realizo fue un formateo de computadora ya que ninguna solucion encontrada funciono
 - Otro reto fue crear el docker-compose ya que tenia que usa una buena tabulacion en el mismo lo cual hacia que se mantuviera un orden
 - En el momento se tienen unos datos en la base de datos como datos de prueba que se ingresaron para la demostracion y prueba que     que la apicacion se encuentra funcionando, en el servidor
+
+
+# Angular-App-API
+
+##Proyecto de Programacion WEB
+
+El propósito de Programación Web era que al finalizar el curso se tuviera una pagina Web Full Stack alojada en la nube.
+
+##Contrucción de la pagina
+
+    FrontEnd en Angular 
+    BackEnd con NodeJs, MongoDB
+    FullStack con Redis
+    Docker
+    Docker in Amazon Web Service y MongoDB en AWS
+    
+    
+## FrontEnd
