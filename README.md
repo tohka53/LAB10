@@ -37,7 +37,7 @@ Se realizo el CRUD en Angular,  Se empleo Angular-Bootstrap 4 para manejar el di
 
 Se siguio la guia para crear una App en Angular del Git. Los comandos que se ejecutaron fueron los siguientes:
 
-ng new name-app
-npm install -g @angular/cli
-npm install --save @ng-bootstrap/ng-bootstrap
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
+    ng new name-app
+    npm install -g @angular/cli
+    npm install --save @ng-bootstrap/ng-bootstrap
+    import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
